@@ -1,0 +1,337 @@
+:root {
+    --principal: #212121;
+    --secundario: #4444c8;
+    --blanco: #fff;
+    --amarillo: #f3f36b;
+    --blancoSecu: #f0f8ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+/* Barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background-color: var(--principal);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+main {
+    margin-top: 80px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.galeria-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.proyecto-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-5px);
+}
+
+.proyecto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.proyecto-card h3 {
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Estilos para la página de detalles */
+.detalles-proyecto {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.volver-btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.volver-btn:hover {
+    text-decoration: underline;
+}
+
+.proyecto-info img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.arquitecto-perfil {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.arquitecto-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 1rem auto;
+    display: block;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.arquitecto-info {
+    padding: 1.5rem;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.arquitecto-info h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.arquitecto-info h4 {
+    color: #0066cc;
+    margin-bottom: 0.5rem;
+}
+
+#arquitecto-experiencia {
+    margin: 1rem 0;
+    color: #666;
+}
+
+#arquitecto-contacto {
+    margin: 1rem 0;
+    color: #0066cc;
+}
+
+.otros-proyectos-lista {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.otros-proyectos-lista li {
+    margin: 0.5rem 0;
+}
+
+.otros-proyectos-lista a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.otros-proyectos-lista a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #000;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon i {
+    font-size: 1.2rem;
+}
+
+.social-icon:hover {
+    background-color: white;
+    color: black;
+}
+
+.copyright {
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.5rem 0;
+    }
+
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .social-icon i {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icons {
+        gap: 0.8rem;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .detalles-proyecto {
+        grid-template-columns: 1fr;
+    }
+    
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+
+
+
+
+
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.item {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.button button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.button button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.button button i {
+    font-size: 1.2rem;
+    color: #333;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseñador de Planos 2D</title>
+    <link rel="stylesheet" href="../css/personalizar.css">
+</head>
+<body>
+    <div class="container">
+        <div class="toolbar">
+            <button id="rect-btn">Rectángulo</button>
+            <button id="wall-btn">Pared</button>
+            <button id="door-btn">Puerta</button>
+            <button id="window-btn">Ventana</button>
+            <button id="text-btn">Texto</button>
+            <button id="clear-btn">Limpiar</button>
+            <button id="export-btn">Exportar</button>
+        </div>
+        <div class="workspace">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="properties-panel">
+            <h3>Propiedades</h3>
+            <div class="property">
+                <label>Ancho (m):</label>
+                <input type="number" id="width-input" value="1" min="0.1" step="0.1">
+            </div>
+            <div class="property">
+                <label>Alto (m):</label>
+                <input type="number" id="height-input" value="1" min="0.1" step="0.1">
+            </div>
+            <div class="property">
+                <label>Color:</label>
+                <input type="color" id="color-input" value="#000000">
+            </div>
+        </div>
+    </div>
+    <div id="export-modal" class="modal">
+        <div class="modal-content">
+            <h2>Exportar Diseño</h2>
+            <form id="export-form">
+                <input type="text" placeholder="Nombre del proyecto" required>
+                <textarea placeholder="Descripción del proyecto" required></textarea>
+                <button type="submit">Enviar solicitud</button>
+            </form>
+        </div>
+    </div>
+    <script src="../js/personalizar.js"></script>
+</body>
+</html>

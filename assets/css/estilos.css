@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.mi-proceso {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center; /* Alinea el texto con la imagen verticalmente */
+
+}
+
+
+.contenido {
+  flex: 1 1 50%;
+  padding-right: 40px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.pasos {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.paso {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.paso img {
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+}
+
+.paso h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #000;
+}
+
+.paso p {
+  margin: 0;
+  color: #555;
+  font-size: 15px;
+}
+
+.imagen {
+  flex: 1 1 40%;
+}
+
+.imagen img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
